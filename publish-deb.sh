@@ -12,8 +12,9 @@ stringToSign="PUT\n\n${contentType}\n${dateValue}\n${resource}"
 
 signature=`echo -en ${stringToSign} | openssl sha1 -hmac ${s3Secret} -binary | base64`
 
-set +x
+
 echo "publishing https://${bucket}.s3.amazonaws.com${folder}/${f}"
+set +x
 curl -X PUT -T "${f}" \
   -H "Host: ${bucket}.s3.amazonaws.com" \
   -H "Date: ${dateValue}" \

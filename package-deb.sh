@@ -3,9 +3,7 @@ set -ex
 #Install Pre-req
 gem install fpm
 apt-get install -y \
-  aclocal \
-  autoheader \
-  autoconf \
+  autotools-dev \
   automake
 
 export DIR=${PWD#}
