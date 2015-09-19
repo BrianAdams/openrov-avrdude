@@ -19,6 +19,7 @@ then
   ARCH="armhf"
 fi
 
+rm -rf $REPO || true
 git clone $REPO
 cd avrdude
 git reset -- hard $GITHASH
