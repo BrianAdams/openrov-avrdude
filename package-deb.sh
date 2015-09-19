@@ -2,6 +2,11 @@
 set -ex
 #Install Pre-req
 gem install fpm
+apt-get install -y \
+  aclocal \
+  autoheader \
+  autoconf \
+  automake
 
 export DIR=${PWD#}
 export PACKAGE="openrov-avrdude"
