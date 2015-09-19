@@ -5,7 +5,8 @@ gem install fpm
 apt-get install -y \
   autotools-dev \
   automake \
-  byacc
+  bison \
+  flex
 
 export DIR=${PWD#}
 export PACKAGE="openrov-avrdude"
