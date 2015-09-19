@@ -36,6 +36,7 @@ make --jobs=8
 make install DESTDIR=${DIR}/avrdude_install
 
 #package
+cd $DIR
 fpm -f -m info@openrov.com -s dir -t deb -a $ARCH \
 	-n ${PACKAGE} \
 	-v ${PACKAGE_VERSION} \
