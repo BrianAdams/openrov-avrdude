@@ -33,7 +33,7 @@ PATH=/usr/:$PATH
 ./bootstrap
 ./configure --prefix=/usr/ --localstatedir=/var/ --sysconfdir=/etc/ --enable-linuxgpio
 make --jobs=8
-make install DESTDIR=../../avrdude_install
+make install DESTDIR=${DIR}/avrdude_install
 
 #package
 fpm -f -m info@openrov.com -s dir -t deb -a $ARCH \
