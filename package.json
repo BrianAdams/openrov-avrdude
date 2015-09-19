@@ -1,0 +1,11 @@
+{
+  "name": "openrov-avrdude",
+  "version": "5.11.1",
+  "description": "AVRDude with linuxspi extenstion",
+  "main": "avrdude",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
