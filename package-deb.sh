@@ -40,6 +40,6 @@ fpm -f -m info@openrov.com -s dir -t deb -a $ARCH \
 	-n ${PACKAGE} \
 	-v ${PACKAGE_VERSION} \
   --replaces ${REPLACES} \
-  --after-install=./install_lib/openrov-avrdude-afterinstall.sh \
+  --after-install=${DIR}/install_lib/openrov-avrdude-afterinstall.sh \
 	--description "OpenROV avrdude" \
 	-C ${DIR}/avrdude_install .
