@@ -1,8 +1,25 @@
 #!/bin/bash
 set -e
 
+while getopts c: opt
+do
+    case "$opt" in
+      c)  DEB_CODENAME="$OPTARG";;
+      \?)		# unknown flag
+      	  echo >&2 \
+	  "usage: $0 [-c deb_codename]"
+	  exit 1;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+if [ "$DEB_CODENAME" = "" ]; then
+        echo "Please set the DEB_CODENAME environment variable to define into what debian repo we should upload the .deb files."
+        exit 1
+fi
+
 bucket="openrov-software-nightlies"
-folder="/avrdude"
+folder="${DEB_CODENAME}/avrdude"
 
 contentType="application/x-compressed-tar"
 dateValue=`date -R`
