@@ -19,7 +19,7 @@ if [ "$DEB_CODENAME" = "" ]; then
 fi
 
 bucket="openrov-software-nightlies"
-folder="${DEB_CODENAME}/avrdude"
+folder="/${DEB_CODENAME}/avrdude"
 
 contentType="application/x-compressed-tar"
 dateValue=`date -R`
